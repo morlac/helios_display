@@ -1,0 +1,26 @@
+# See /boot/overlays/README for all available options
+
+#dtoverlay=vc4-kms-v3d
+
+#dtparam=spi=off
+#dtparam=i2c_arm=on
+
+#dtoverlay=i2c-rtc,ds1307
+
+#dtoverlay=enc28j60
+
+# remap pins of i2c1
+#dtoverlay=i2c1,pins_44_45=1
+
+# create gpio-i2c
+dtoverlay=i2c-gpio,i2c_gpio_sda=23,i2c_gpio_scl=24
+
+#include eleduino_config.txt
+
+include heliosdisplay_config.txt
+
+initramfs initramfs-linux.img followkernel
+
+[pi4]
+# Run as fast as firmware / board allows
+arm_boost=1

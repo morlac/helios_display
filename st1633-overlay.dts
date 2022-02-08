@@ -1,0 +1,49 @@
+// Device tree overlay for I2C connected st1232/st1633 multiple touch controller
+// Available through i2c-gpio
+/dts-v1/;
+/plugin/;
+
+/ {
+	fragment@0 {
+		target = <&gpio>;
+		__overlay__ {
+			st1633_pins: st1633_pins {
+				brcm,pins = <22 25>; // interrupt and reset
+				brcm,function = <0 0>; // in out
+				brcm,pull = <2 2>; // pullup
+			};
+		};
+	};
+
+	fragment@1 {
+		target = <&i2c_gpio>;
+		__overlay__ {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			status = "okay";
+
+			st1633: st1633@55 {
+				compatible = "sitronix,st1633";
+				reg = <0x55>;
+				pinctrl-names = "default";
+				pinctrl-0 = <&st1633_pins>;
+				interrupt-parent = <&gpio>;
+				interrupts = <22 8>; 
+				irq-gpios = <&gpio 22 0>; // Pin15 on GPIO header
+				gpios = <&gpio 25 0>; // Pin22 on GPIO header
+				touchscreen-inverted-x = "okay";
+				touchscreen-inverted-y = "";
+			};
+		};
+	};
+
+	__overrides__ {
+		interrupt = <&st1633_pins>,"brcm,pins:0",
+			<&st1633>,"interrupts:0",
+			<&st1633>,"irq-gpios:4";
+		reset = <&st1633_pins>,"brcm,pins:4",
+			<&st1633>,"gpios:4";
+		inverted-x = <&st1633>,"touchscreen-inverted-x:0";
+		inverted-y = <&st1633>,"touchscreen-inverted-y:0";
+	};
+};

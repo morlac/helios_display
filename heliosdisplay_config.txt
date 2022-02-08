@@ -1,0 +1,62 @@
+dtoverlay=dpi18
+
+display_rotate=2
+
+disable_overscan=1
+
+#overscan_left=0
+#overscan_right=0
+#overscan_top=0
+#overscan_bottom=0
+
+framebuffer_width=800
+framebuffer_height=480
+
+enable_dpi_lcd=1
+
+display_default_lcd=1
+
+dpi_group=2
+dpi_mode=87
+
+# https://nerdhut.de/software/raspberry-pi-dpi-calculator/
+
+# Output Format:                 DPI_OUTPUT_FORMAT_18BIT_666_CFG1
+# RGB_ORDER:                     DPI_RGB_OUTPUT_RGB
+# Output Enable Mode:            Enable when Data is valid
+# Invert Pixel Clock:            ON
+# Disable HSYNC:                 OFF
+# Disable VSYNC:                 OFF
+# Disable Output Enable:         OFF
+# Invert HSYNC Polarity:         ON
+# Invert VSYNC Polarity:         ON
+# Invert Output Enable Polarity: ON
+# HSYNC Phase:                   Falling Edge Triggered
+# VSYNC Phase:                   Falling Edge Triggered
+# Output Enable Phase:           Falling Edge Triggered
+# Binary Value:                  1111110001000010101
+# Decimal Value:                 516629
+
+dpi_output_format=0x7e215
+
+# Timing Settings:
+# Horizontal Pixels:      800
+# HSYNC Polarity:         0   (LOW Sync Pulse)
+# Horizontal Front Porch: 40
+# HSYNC Duration:         128
+# Horizontal Back Porch:  88
+# Active Lines:           480
+# VSYNC Polarity:         0   (LOW Sync Pulse)
+# Vertical Front Porch:   13
+# VSYNC Duration:         2
+# Vertical Back Porch:    30
+# VSYNC Offset A:         0
+# VSYNC Offset B:         0
+# Pixel Rep:              0
+# Framerate:              60
+# Interlace:              0   (OFF)
+# Pixel Clock (Hz):       33169200
+# Aspect Ratio:           6   (HDMI_ASPECT_15_9)
+
+dpi_timings=800 0 40 128 88 480 0 13 2 30 0 0 0 60 0 33169200 6
+
