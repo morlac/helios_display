@@ -1,0 +1,27 @@
+"Source:","/home/adams/github/helios_display/KiCAD/Helios-Display.kicad_sch"
+"Date:","Sat 23 Apr 2022 11:58:16 AM CEST"
+"Tool:","Eeschema (6.0.4)"
+"Generator:","/usr/share/kicad/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","6"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"","","J1","Raspberry_Pi_2_3","Connector:Raspberry_Pi_2_3","Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical","https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf"
+"","","J2","FFC_ST1633 (Touch)","Connector:Conn_01x06_Female","Connector_FFC-FPC:Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal","~"
+"","","J3","Conn_01x45_Female","Connector:Conn_01x45_Female","Connector_FFC-FPC:Hirose_FH12-45S-0.5SH_1x45-1MP_P0.50mm_Horizontal","~"
+"","","J4","I2C","Connector:Conn_01x04_Male","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","~"
+"","","J5","Conn_01x04_Male","Connector:Conn_01x04_Male","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","~"
+"","","J6","Conn_01x02","Connector_Generic:Conn_01x02","","~"
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"1","1","J1","Raspberry_Pi_2_3","Connector:Raspberry_Pi_2_3","Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical","https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf"
+"2","1","J2","FFC_ST1633 (Touch)","Connector:Conn_01x06_Female","Connector_FFC-FPC:Hirose_FH12-6S-0.5SH_1x06-1MP_P0.50mm_Horizontal","~"
+"3","1","J3","Conn_01x45_Female","Connector:Conn_01x45_Female","Connector_FFC-FPC:Hirose_FH12-45S-0.5SH_1x45-1MP_P0.50mm_Horizontal","~"
+"4","1","J4","I2C","Connector:Conn_01x04_Male","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","~"
+"5","1","J5","Conn_01x04_Male","Connector:Conn_01x04_Male","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical","~"
+"6","1","J6","Conn_01x02","Connector_Generic:Conn_01x02","","~"

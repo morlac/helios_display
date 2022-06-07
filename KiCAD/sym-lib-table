@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Helios-Display")(type "KiCad")(uri "/home/adams/github/helios_display/KiCAD/Helios-Display.kicad_sym")(options "")(descr ""))
+)
